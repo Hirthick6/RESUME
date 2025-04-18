@@ -7,6 +7,4 @@ Data Science & Machine Learning Engineer
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:hirthicksofficial@gmail.com)
 📱 +91 7530053910 | 📍 Madurai, Tamil Nadu
 
-# HIRTHICK S
-
-[View my resume](Hirthick%20S%20Resume.pdf)
+[View my resume online](https://hirthick6.github.io/Hirthick%20S%20Resume.pdf)
