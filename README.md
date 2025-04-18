@@ -6,6 +6,6 @@ Data Science & Machine Learning Engineer
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-gray)](https://github.com/Hirthick6)
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:hirthicksofficial@gmail.com)
 
-[View my resume online](https://hirthick6.github.io/Hirthick%20S%20Resume.pdf)
+[View my resume online](https://hirthicks-portfolio.netlify.app/)
 
 ![Hirthick S Resume](https://raw.githubusercontent.com/Hirthick6/Hirthick-Portfolio-Resume/main/Hirthick%20S%20Resume.jpg)
