@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hirthick S Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  background-color: #cde1f8;
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+   
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Hirthick</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image: url(images/profile_1.png); background-size: contain; width: 450px; height: 450px;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Hirthick</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer  ',
+						'Programmer   ',
+                                                'AI Researcher  ',
+                                                'Deep Learning Enthusiast  ',
+                                                'Tech Innovator  ',
+                                                'Problem Solver  '
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Senior Data Analyst</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://github.com/Hirthick6" class="btn btn-primary py-3 px-4">Github</a> 
+                                    <a href="https://www.linkedin.com/in/s-hirthick-9815732a6/" class="btn btn-primary py-3 px-4">
+LinkedIn</a> 
+							<a href="https://github.com/Hirthick6?tab=repositories" class="btn btn-primary py-3 px-4">
+MY WORKS</a>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.jpeg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Hirthick S</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>1.5 Years</span></p>
+										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+                                                                        <span>Deep Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+
+ 
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p style="text-align: justify;">A highly motivated Data Science professional with a 5-Year Integrated MSc in Data Science from Thiagarajar College of Engineering and 5+ years of experience in programming, analytics, and machine learning. Expertise in data analysis, statistical modeling, hypothesis testing, customer behavior analysis, and predictive analytics. Proven ability to lead projects, mentor teams, and develop data-driven strategies to solve real-world challenges. Strong foundation in engineering and machine learning, with hands-on experience in delivering innovative and scalable solutions. Passionate about leveraging AI and data insights to drive business growth. Skilled in Python, SQL, Power BI, NLP, and deep learning with a commitment to continuous learning and excellence.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>AI & Data Science, Business Analytics, FinTech, Healthcare Analytics, Retail Analytics, BFSI, E-commerce</span></li>
+									<li class="d-flex"><span>Education:</span> <span>5-Year Integrated Master of Science in Data Science</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Tamil</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Google Vision &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>AWS, Pandas, PyTorch, TensorFlow, Scikit-learn, SQL, MongoDB, Git &amp; Github</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching, Data Science Research</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Repositories</span>
+								</p>
+								<p><a href="https://github.com/Hirthick6?tab=repositories" class="btn btn-primary py-3 px-3">Project Repositories</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">PROFESSIONAL EXPERIENCE 2024</span>
+						<h2>SOFTWARE ENGINEER</h2>
+						<span class="position"></span>
+						<p class="mt-4">
+    <strong>Software Engineer</strong>  
+    <span>Gateway Software Solutions Private Limited, Coimbatore</span>
+    <ul>
+        <li>Developed a cyberbullying detection system using Natural Language Processing (NLP) and Machine Learning to analyze and classify social media content.</li>
+        <li>Implemented sentiment analysis, image classification using deep learning, and keyword-based filtering techniques to identify harmful content.</li>
+        <li>Utilized Python, TensorFlow, Scikit-learn, and NLP libraries for model development and performance optimization.</li>
+        <li>Built an interactive user interface with Streamlit for real-time monitoring and content visualization.</li>
+        <li>Integrated MongoDB for managing large-scale social media datasets efficiently.</li>
+        <li>Preprocessed data using tokenization, lemmatization, and stop-word removal to improve model accuracy.</li>
+        <li>Collaborated with team members to deploy the solution and ensured it adhered to data security guidelines.</li>
+        <li>Documented workflows and model performance to streamline system updates and knowledge sharing.</li>
+    </ul>
+</p>
+
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">INTERNSHIP EXPERIENCE 2024</span>
+						<h2>DATA SCIENCE SCHOLAR-TCE</h2>
+						<span class="position"></span>
+						<p class="mt-4">
+    <strong>Machine Learning Intern</strong>  
+    <span>IIIT Allahabad</span>
+    <ul>
+        <li>Predicted startup success rates using data analytics and machine learning techniques.</li>
+        <li>Handled data preprocessing, feature engineering, and predictive modeling.</li>
+        <li>Collaborated with team members to integrate models into production pipelines for real-time analysis.</li>
+    </ul>
+
+    <strong>Data Science & Analytics Intern</strong>  
+    <span>IIT Kanpur</span>
+    <ul>
+        <li>Developed AI solutions for crop prediction using soil and climate data.</li>
+        <li>Built predictive models with Python, Pandas, and TensorFlow.</li>
+        <li>Conducted exploratory data analysis to extract actionable insights from large datasets.</li>
+    </ul>
+
+    <strong>Web Development and Designing Intern</strong>  
+    <span>OASIS INFOBYTE</span>
+    <ul>
+        <li>Designed a hospital management system with HTML, CSS, and JavaScript.</li>
+        <li>Implemented database management for patient records.</li>
+        <li>Enhanced UI/UX by optimizing website layout and ensuring responsive design across devices.</li>
+    </ul>
+</p>
+
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021-2026</span>
+    					<h2>Integrated MSc in Data Science</h2>
+    					<span class="position">Thiagarajar College of Engineering</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2021</span>
+    					<h2> Higher Secondary School Education</h2>
+    					<span class="position">Devasakayam
+ Public School</span>
+    					<p class="mt-4">Grade: First class distinction 90.92%.</p>
+
+    				</div>
+				</div>
+    		</div>
+
+    		
+    </section>
+
+
+   <section id="tech-stack-logos" style="text-align: center;">
+   
+  <h1 class="big-4">Tech Stack I Am Interested In</h1>
+  <div class="underline" style="margin: 5px auto; width: 1160px; height: 4px; background-color: #000;"></div>
+  
+  <div class="logo-grid" style="
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Adjust column widths */
+  column-gap: 0px; /* Reduced space between columns */
+  row-gap: 15px; /* Keep space between rows as it is */
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+">
+    <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="logo">
+    <img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas" class="logo">
+    <img src="https://cdn.simpleicons.org/numpy/013243" alt="NumPy" class="logo">
+    <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" class="logo">
+    <img src="https://cdn.simpleicons.org/keras/D00000" alt="Keras" class="logo">
+    <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" class="logo">
+    <img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" class="logo">
+    <img src="https://cdn.simpleicons.org/jupyter/F37626" alt="Jupyter" class="logo">
+    <img src="https://cdn.simpleicons.org/anaconda/42B029" alt="Anaconda" class="logo">
+    <img src="images/flask.png" alt="My Local Image" class="logo">
+    <img src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="OpenCV" class="logo">
+    <img src="https://cdn.simpleicons.org/html5/FF5733" alt="HTML" class="logo">
+    <img src="https://cdn.simpleicons.org/css3/2965F1" alt="CSS" class="logo">
+    <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" class="logo">
+    <img src="images/javas-modified.png" alt="My Local Image" class="logo">
+    <img src="images/matt.png" alt="My Local Image" class="logo">
+    <img src="images/excel.png" alt="My Local Image" class="logo">
+    <img src="images/ntlk.png" alt="My Local Image" class="logo">
+    <img src="images/oracle.png" alt="My Local Image" class="logo">
+    <img src="images/wamp.png" alt="My Local Image" class="logo">
+    <img src="images/tab.png" alt="My Local Image" class="logo">
+    <img src="images/xamp.png" alt="My Local Image" class="logo">
+    <img src="images/cass-modified.png" alt="My Local Image" class="logo">
+    <img src="images/aws.png" alt="My Local Image" class="logo">
+    <img src="images/neo.png" alt="My Local Image" class="logo">
+    <img src="images/bi.png" alt="My Local Image" class="logo">
+    <img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" class="logo">
+    <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" class="logo">
+    <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" class="logo">
+    <img src="https://cdn.simpleicons.org/streamlit/FF4B4B" alt="Streamlit" class="logo">
+  </div>
+</section>
+
+<style>
+  .logo {
+    width: 60px;
+    height: 60px; /* Reduced size */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(255, 204, 0, 0.5);
+  }
+</style>
+
+<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p>
+  <a href="https://github.com/Hirthick6/Hirthick-Portfolio-Resume/blob/main/Hirthick%20S%20Resume.pdf" 
+     class="btn btn-primary py-4 px-5" 
+     download="Hirthick_S_Resume.pdf">
+     Download CV
+  </a>
+</p
+    			</div>
+    		</div>
+    	</div>
+
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are sample Data Analytics projects using Machine Learning, Deep Learning, NLP, OpenCV, SQL, Python, and Power BI.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Hirthick6/HealthcareApp" class="block-20 zoom-effect" style="background-image: url('images/health.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading">
+  <a href="https://github.com/Hirthick6/HealthcareApp">
+    AI-Powered Medical Healthcare System for Multi-Disease Diagnosis
+  </a>
+</h3>
+<p style="text-align: justify;">
+  Develop an AI diagnostic system using machine learning and deep learning to detect Alzheimer’s, Brain Tumor, COVID-19, Diabetes, Heart Disease, Pneumonia, and Skin Cancer. </p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Hirthick6/YOLOv8-Object-Detection-and-Tracking-streamlit-" class="block-20 zoom-effect" style="background-image: url('images/obj.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Hirthick6/YOLOv8-Object-Detection-and-Tracking-streamlit-">Real-time Object Detection and Tracking with YOLOv8 using Streamlit</a></h3>
+                <p style="text-align: justify;">
+  Developed a real-time object detection and tracking system using YOLOv8 & Streamlit, ensuring fast, accurate identification & efficient tracking of objects in images & videos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Hirthick6/AI-FarmApp" class="block-20 zoom-effect" style="background-image: url('images/green.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Hirthick6/AI-FarmApp">AI-Driven Agricultural Farming for Crop, Fertilizer, and Disease Management</a></h3>
+                <p style="text-align: justify;">
+  A web platform powered by Machine Learning and Deep Learning, offering crop recommendations, fertilizer suggestions, and plant disease detection to enhance farming productivity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Hirthick6/Startup-Company-Machine-Learning" class="block-20 zoom-effect" style="background-image: url('images/start.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Hirthick6/Startup-Company-Machine-Learning">Startup Success Prediction Using Machine Learning Techniques</a></h3>
+                <p style="text-align: justify;">
+  This project uses machine learning to predict startup success based on key factors like funding and market trends, helping investors and entrepreneurs make informed decisions and minimize risks.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Hirthick6/Cyberbullying-Detection" class="block-20 zoom-effect" style="background-image: url('images/cyber.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Hirthick6/Cyberbullying-Detection">Cyberbullying Detection Using Natural Language Processing</a></h3>
+                <p style="text-align: justify;">This project utilizes Natural Language Processing techniques to identify & analyze cyberbullying in text data. It helps detect harmful content on social media, enabling proactive moderation & user protection.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Hirthick6/Deep-Learning-OCR-Based-Automatic-Number-Plate-Recognition" class="block-20 zoom-effect" style="background-image: url('images/minipro.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Hirthick6/Deep-Learning-OCR-Based-Automatic-Number-Plate-Recognition">
+License Plate Recognition using Deep Learning & OCR</a></h3>
+                <p style="text-align: justify;">This project uses deep learning and OCR to detect vehicle number plates, streamlining traffic monitoring and law enforcement with real-time processing and seamless automation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+ <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Hirthick6/Zomato-Sales-and-Growth-Analytics-Dashboard-Using-PowerBI" class="block-20 zoom-effect" style="background-image: url('images/zomato.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Hirthick6/Zomato-Sales-and-Growth-Analytics-Dashboard-Using-PowerBI">Zomato Sales and Growth Dashboard Using Power BI</a></h3>
+                <p style="text-align: justify;">Power BI dashboard provides insights into Zomato's sales, user growth, and order trends. It visualizes key metrics like total sales, yearly growth, and average order value for data-driven decision-making.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Hirthick6/Computer-Vision-Attendance-Application-Streamlit" class="block-20 zoom-effect" style="background-image: url('images/att.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Hirthick6/Computer-Vision-Attendance-Application-Streamlit">Streamlit-Based Computer Vision Attendance System</a></h3>
+                <p style="text-align: justify;">Streamlit-based application leverages computer vision and facial recognition to automate attendance tracking. It enhances accuracy, efficiency, and reliability in attendance management systems.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Hirthick6/Coffee-Shop-Sales-Analytics-Using-an-Excel-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/coffee.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Hirthick6/Coffee-Shop-Sales-Analytics-Using-an-Excel-Dashboard">Coffee Shop Sales Analytics Using an Excel Dashboard</a></h3>
+                <p  style="text-align: justify;">Excel dashboard analyzes coffee shop sales & purchasing trends, visualizing key metrics to support data-driven business growth. It helps optimize sales strategies & improve customer experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+
+               <div class="row">
+			<h1 class="big-4">Book Chapters, Conference and Journal</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+
+
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://digital-library.theiet.org/doi/10.1049/PBHE059E_ch16" class="block-20 zoom-effect" style="background-image: url('images/iets.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://digital-library.theiet.org/doi/10.1049/PBHE059E_ch16">IET Digital Library – Brain Tumor Classification Using Deep Learning</a></h3>
+                <p style="text-align: justify;">IET Digital Library features a book chapter from Deep Learning in Medical Image Processing and Analysis. It explores brain tumor classification using deep learning techniques.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://ieeexplore.ieee.org/document/10863014" class="block-20 zoom-effect" style="background-image: url('images/inco.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://ieeexplore.ieee.org/document/10863014">Software Startup Success Prediction at IEEE INCOWOCO 2024</a></h3>
+                <p style="text-align: justify;"> Machine Learning Methods of Comparative Analysis, at IEEE INCOWOCO at Symbiosis International University, Pune. Engaged with experts and explored advancements in machine learning and computing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://www.igi-global.com/chapter/deep-learning-advancements-in-malaria-diagnosis/351607" class="block-20 zoom-effect" style="background-image: url('images/igi.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.igi-global.com/chapter/deep-learning-advancements-in-malaria-diagnosis/351607">Deep Learning Advancements in Malaria Diagnosis – IGI Global</a></h3>
+                <p style="text-align: justify;">CNN model achieves 96.5% accuracy in malaria detection using PyTorch and GPU acceleration. It explores data augmentation, hyperparameter tuning & transfer learning for improved diagnostics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+
+<div class="row d-flex justify-content-center"> 
+    <div class="col-md-5 d-flex ftco-animate"> 
+        <div class="blog-entry justify-content-end"> 
+            <a href="https://github.com/Hirthick6/AI-Powered-Human-Recognition-Journal-of-Artificial-Intelligence" class="block-20 zoom-effect" style="background-image: url('images/jpaper.png');"> </a> 
+            <div class="text mt-3 float-right d-block"> 
+                <h3 class="heading"><a href="https://github.com/Hirthick6/AI-Powered-Human-Recognition-Journal-of-Artificial-Intelligence">AI-Powered Human Recognition: Ethical Challenges and Future Directions – Journal of Artificial Intelligence</a></h3> 
+                <p style="text-align: justify;">Ethical implications of AI-driven human recognition systems, addressing privacy concerns, biases & regulatory challenges. It also examines future advancements & responsible AI deployment strategies.
+✅ This paper is ACCEPTED and ONGOING to PUBLISH!!!!</p> 
+            </div> 
+        </div> 
+    </div> 
+    <div class="col-md-5 d-flex ftco-animate"> 
+        <div class="blog-entry"> 
+            <a href="https://github.com/Hirthick6/Optimizing-Agricultural-Decision-CRC-Press" class="block-20 zoom-effect" style="background-image: url('images/bookc.png');"> </a> 
+            <div class="text mt-3 float-right d-block"> 
+                <h3 class="heading"><a href="https://github.com/Hirthick6/Optimizing-Agricultural-Decision-CRC-Press">Optimizing Agricultural Decision-Making: Leveraging SMOTE and Machine Learning for Balanced Data Insights – CRC Press</a></h3> 
+                <p style="text-align: justify;">Integration of SMOTE with machine learning  to address data imbalance in agricultural decision-making, It significantly enhances predictive accuracy, ensuring reliable insights for sustainable farming practices. 
+✅ This paper is ACCEPTED and ONGOING to PUBLISH!!!!</p> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+
+
+
+
+
+
+<div class="row">
+			<h1 class="big-4">CODING PLATFORM</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+
+<div class="row d-flex justify-content-center"> 
+    <div class="col-md-5 d-flex ftco-animate"> 
+        <div class="blog-entry justify-content-end"> 
+            <a href="http://www.skillrack.com/profile/466662/c071d1c105cdec1f1d3934b9ef7ed11c8e5669b3 " class="block-20 zoom-effect" style="background-image: url('images/skr.png');"> </a> 
+            <div class="text mt-3 float-right d-block"> 
+                <h3 class="heading"><a href="http://www.skillrack.com/profile/466662/c071d1c105cdec1f1d3934b9ef7ed11c8e5669b3 ">SkillRack (1500+ coding problems solved)</a></h3> 
+                
+            </div> 
+        </div> 
+    </div> 
+    <div class="col-md-5 d-flex ftco-animate"> 
+        <div class="blog-entry"> 
+            <a href="https://www.naukri.com/code360/profile/Hirthick" class="block-20 zoom-effect" style="background-image: url('images/cod.png');"> </a> 
+            <div class="text mt-3 float-right d-block"> 
+                <h3 class="heading"><a href="https://www.naukri.com/code360/profile/Hirthick">Coding Ninjas (550+ coding problems solved)</a></h3> 
+                
+            </div> 
+        </div> 
+    </div> 
+</div>
+
+
+<div class="row d-flex justify-content-center"> 
+    <div class="col-md-5 d-flex ftco-animate"> 
+        <div class="blog-entry justify-content-end"> 
+            <a href="https://www.geeksforgeeks.org/user/hirthicks/" class="block-20 zoom-effect" style="background-image: url('images/gfg.png');"> </a> 
+            <div class="text mt-3 float-right d-block"> 
+                <h3 class="heading"><a href="https://www.geeksforgeeks.org/user/hirthicks/">GeeksforGeeks (250+ coding problems solved)</a></h3> 
+                
+            </div> 
+        </div> 
+    </div> 
+    <div class="col-md-5 d-flex ftco-animate"> 
+        <div class="blog-entry"> 
+            <a href="https://leetcode.com/u/HirthickS/" class="block-20 zoom-effect" style="background-image: url('images/lcc.png');"> </a> 
+            <div class="text mt-3 float-right d-block"> 
+                <h3 class="heading"><a href="https://leetcode.com/u/HirthickS/">LeetCode (150+ coding problems solved)</a></h3> 
+                
+            </div> 
+        </div> 
+    </div> 
+</div>
+
+
+           
+        
+        
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section" style="background-color: #FFB94F; padding: 6rem 0; text-align: center;">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 style="color: white; font-size: 3.5rem; font-weight: bold; margin-bottom: 2rem;">More projects on <a href="https://github.com/Hirthick6" style="
+                    background-color: white;
+                    color: #000000; 
+                    padding: 15px 15px; 
+                    border-radius: 4px; 
+                    text-decoration: none; 
+                    font-weight: 600; 
+                    letter-spacing: 2px;
+                    font-size: 1.3rem;
+
+                    transition: all 0.3s ease;">GITHUB</a>
+            </h2>
+            <p style="color: white; font-size: 1.8rem; font-weight: 300; max-width: 800px; margin: 0 auto;">I love to solve business problems & uncover hidden data stories</p>
+            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 3rem; align-items: center;">
+                <a href="https://medium.com/@hirthicksofficial" style="
+                    background-color: white;
+                    color: #000000; 
+                    padding: 12px 15px; 
+                    border-radius: 4px; 
+                    text-decoration: none; 
+                    font-weight: 600; 
+                    letter-spacing: 2px;
+                    font-size: 1.3rem;
+                    transition: all 0.3s ease;">MEDIUM</a>
+            </div>
+        </div>
+    </div>
+</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Bengaluru, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 7530053910</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">hirthicksofficial@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeycJQiaPHQTpvFGxauYKrsKrTrucIWxCmu3p2wU98uej5eBQ/viewform" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://github.com/Hirthick6"><span class="icon-github"></span></a></li>
+<li class="ftco-animate"><a href="https://medium.com/@hirthicksofficial"><span class="icon-medium"></span></a></li>
+<li class="ftco-animate"><a href="https://www.linkedin.com/in/s-hirthick-9815732a6/"><span class="icon-linkedin"></span></a></li>
+<li class="ftco-animate">
+  <a href="mailto:hirthicksofficial@gmail.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" style="width: 45px; height: 48px;">
+  </a>
+</li>
+
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is customized with 
+  <i class="icon-heart color-danger" aria-hidden="true"></i> by Hirthick S.
+</p>
+
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
