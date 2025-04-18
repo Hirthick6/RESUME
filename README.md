@@ -8,4 +8,4 @@ Data Science & Machine Learning Engineer
 
 [View my portfolio online](https://hirthicks-portfolio.netlify.app/)
 
-![Hirthick S Resume](https://raw.githubusercontent.com/Hirthick6/Hirthick-Portfolio-Resume/main/Hirthick%20S%20Resume.jpg)
+![Hirthick S Resume](https://github.com/Hirthick6/Hirthick-Portfolio-Resume/blob/main/Hirthick%20S%20Resume.jpg)
