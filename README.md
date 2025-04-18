@@ -8,4 +8,4 @@ Data Science & Machine Learning Engineer
 
 [View my resume online](https://hirthick6.github.io/Hirthick%20S%20Resume.pdf)
 
-![Hirthick S Resume](Hirthick S Resume.jpg)
+![Hirthick S Resume](https://raw.githubusercontent.com/Hirthick6/Hirthick-Portfolio-Resume/main/Hirthick%20S%20Resume.jpg)
